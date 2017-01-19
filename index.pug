@@ -1,0 +1,72 @@
+//output:index.html, pretty:true
+extends base.jade
+
+block title
+  title Agenda 1.0 - [LISTADO]
+block style
+block nav
+  nav
+    ul.topnav#myTopnav
+      li
+        a(href="javascript:void(0);") Inicio
+      li
+        a(href="javascript:void(0);") Altas
+      li.icon
+        a(href="javascript:void(0);" style="font-size:15px;") ☰
+block article
+  article
+    div#cajaNuevaAlta.ocultar
+      figure.titulo
+        img(src="img/altas.png" alt="altas")
+        figcaption
+          h1 Altas
+      div#cajaNuevaAltaUsuario
+        input(id="nombre" type="text" placeholder="Nombre..." value="1")
+        input(id="apellidos" type="text" placeholder="Apellidos..." value="1")
+        input(id="dni" type="text" placeholder="Dni..." value="1")
+        input(id="curso" type="text" placeholder="Curso..." value="1")
+        input(id="telefono" type="tel" placeholder="Teléfono..." value="1" )
+        input(id="direccion" type="text" placeholder="Dirección..." value="1")
+        p#tituloFoto Seleccione una foto...
+        input(id="foto" type="file" accept="image/*" class="ocultar")
+        div#contenedorFoto
+        button(id="btnEnviar" type="button") Guardar
+        button(id="btnCancelar" type="button") Cancelar
+    div#cajaBuscar
+      figure.titulo
+        img(src="img/consultas.png" alt="consultas")
+        figcaption
+          h1 Buscar
+      input(id="buscar" type="text" placeholder="Nombre...")
+      button(id="btnBuscar" type="button") Buscar
+    div#cajaListado
+      div#listado
+    div#cajaModificar.ocultar
+      figure.titulo
+        img(src="img/modificaciones.png" alt="consultas")
+        figcaption
+          h1 Editar
+      div#cajaModificarUsuario
+          figure
+            img(id="cajaFoto" src="" alt="")
+            figcaption
+          input(id="mnombre" type="text" placeholder="Nombre...")
+          input(id="mapellidos" type="text" placeholder="Apellidos...")
+          input(id="mdni" type="text" placeholder="Dni..." readonly disabled class="ocultar")
+          input(id="mcurso" type="text" placeholder="Curso...")
+          input(id="mtelefono" type="tel" placeholder="Teléfono...")
+          input(id="mdireccion" type="text" placeholder="Dirección...")
+          p#mtituloFoto Seleccione una foto...
+          input(id="mfoto" type="file" accept="image/*" class="ocultar")
+          div#mcontenedorFoto
+          button(id="mbtnEnviar" type="button") Guardar
+          button(id="mbtnCancelar" type="button") Cancelar
+    div#estadoPeticion.ocultar
+      img(src="img/cargando.gif" alt="cargando...")
+    div#panelErrores.ocultar
+        span.closebtn
+    div#botonesMostrar
+      button(id="btnMas" type="button") Mostrar más...
+      button(id="btnTodos" type="button") Mostrar todos
+block script
+  script(src="js/index.js")

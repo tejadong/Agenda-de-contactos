@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Agenda 1.0 - [LISTADO]</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <figure><img src="img/logo.png" alt="logo"/>
+          <figcaption>
+            <h1>Agenda 1.0</h1>
+          </figcaption>
+        </figure>
+      </div>
+      <nav>
+        <ul id="myTopnav" class="topnav">
+          <li><a href="javascript:void(0);">Inicio</a></li>
+          <li><a href="javascript:void(0);">Altas</a></li>
+          <li class="icon"><a href="javascript:void(0);" style="font-size:15px;">☰</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <article>
+        <div id="cajaNuevaAlta" class="ocultar">
+          <figure class="titulo"><img src="img/altas.png" alt="altas"/>
+            <figcaption>
+              <h1>Altas</h1>
+            </figcaption>
+          </figure>
+          <div id="cajaNuevaAltaUsuario">
+            <input id="nombre" type="text" placeholder="Nombre..." value="1"/>
+            <input id="apellidos" type="text" placeholder="Apellidos..." value="1"/>
+            <input id="dni" type="text" placeholder="Dni..." value="1"/>
+            <input id="curso" type="text" placeholder="Curso..." value="1"/>
+            <input id="telefono" type="tel" placeholder="Teléfono..." value="1"/>
+            <input id="direccion" type="text" placeholder="Dirección..." value="1"/>
+            <p id="tituloFoto">Seleccione una foto...</p>
+            <input id="foto" type="file" accept="image/*" class="ocultar"/>
+            <div id="contenedorFoto"></div>
+            <button id="btnEnviar" type="button">Guardar</button>
+            <button id="btnCancelar" type="button">Cancelar</button>
+          </div>
+        </div>
+        <div id="cajaBuscar">
+          <figure class="titulo"><img src="img/consultas.png" alt="consultas"/>
+            <figcaption>
+              <h1>Buscar</h1>
+            </figcaption>
+          </figure>
+          <input id="buscar" type="text" placeholder="Nombre..."/>
+          <button id="btnBuscar" type="button">Buscar</button>
+        </div>
+        <div id="cajaListado">
+          <div id="listado"></div>
+        </div>
+        <div id="cajaModificar" class="ocultar">
+          <figure class="titulo"><img src="img/modificaciones.png" alt="consultas"/>
+            <figcaption>
+              <h1>Editar</h1>
+            </figcaption>
+          </figure>
+          <div id="cajaModificarUsuario">
+            <figure><img id="cajaFoto" src="" alt=""/>
+              <figcaption></figcaption>
+            </figure>
+            <input id="mnombre" type="text" placeholder="Nombre..."/>
+            <input id="mapellidos" type="text" placeholder="Apellidos..."/>
+            <input id="mdni" type="text" placeholder="Dni..." readonly="readonly" disabled="disabled" class="ocultar"/>
+            <input id="mcurso" type="text" placeholder="Curso..."/>
+            <input id="mtelefono" type="tel" placeholder="Teléfono..."/>
+            <input id="mdireccion" type="text" placeholder="Dirección..."/>
+            <p id="mtituloFoto">Seleccione una foto...</p>
+            <input id="mfoto" type="file" accept="image/*" class="ocultar"/>
+            <div id="mcontenedorFoto"></div>
+            <button id="mbtnEnviar" type="button">Guardar</button>
+            <button id="mbtnCancelar" type="button">Cancelar</button>
+          </div>
+        </div>
+        <div id="estadoPeticion" class="ocultar"><img src="img/cargando.gif" alt="cargando..."/></div>
+        <div id="panelErrores" class="ocultar"><span class="closebtn"></span></div>
+        <div id="botonesMostrar">
+          <button id="btnMas" type="button">Mostrar más...</button>
+          <button id="btnTodos" type="button">Mostrar todos</button>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <p>Copyright IES Oretania 2º DAW Jesús Tejada Pérez Curso 2016/2017</p>
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
