@@ -17,10 +17,11 @@
 	];
 
 	try {
+		$dbhost = "localhost";
 		$dbname = "agenda";
 		$dbuser = "root";
 		$dbpass = "oretania";
-		$db = new PDO('mysql:host=localhost;dbname='.$dbname.';charset=utf8mb4', $dbuser, $dbpass);
+		$db = new PDO('mysql:host='.$dbhost.';dbname='.$dbname.';charset=utf8mb4', $dbuser, $dbpass);
 	} catch(PDOException $e) {
 		$estado[0] = 'Código de error SQLSTATE: '. $e->getCode();
 		$estado[1] = 'Código de error específico del driver: '. $e->getLine();
